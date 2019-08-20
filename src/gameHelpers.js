@@ -1,9 +1,10 @@
 export const STAGE_WIDTH = 12;
 export const STAGE_HEIGHT = 20;
 
+//create the stage
 export const createStage = () => 
   Array.from(Array(STAGE_HEIGHT), () => //each row create a new array that's the rule of this callback
-    new Array(STAGE_WIDTH).fill([0, 'clear'])
+    new Array(STAGE_WIDTH).fill([0, 'clear'])// the last array [0, <- tetromino, 'clear' <- state empty cell]
   )
 
 export const checkCollision = (player, stage, { x: moveX, y: moveY }) => {
